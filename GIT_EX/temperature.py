@@ -1,15 +1,16 @@
 
 def main():
 
+    input_type = input("Select transform direction (CF) or (FC): ")
+
     try:
-	input_type = input("Select transform direction (CF) or (FC): ")
         input_temp = float(input("Input temperature: "))
     except:
         print("Not valid input")
         exit()
 
 
-    print (t_transform(input_temp, input_type)))
+    print (t_transform(input_temp, input_type))
 
 
 
