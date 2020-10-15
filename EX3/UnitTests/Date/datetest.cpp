@@ -1,5 +1,6 @@
 #include <QtTest>
 #include "date.hh"
+#include "baddate.hh"
 
 // add necessary includes here
 
