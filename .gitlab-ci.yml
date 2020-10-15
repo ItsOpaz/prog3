@@ -93,7 +93,7 @@ Date:
   artifacts:
     # Paths to the artifacts we want to pass
     paths:
-      - EX3/UnitTests/Date/tst_date
+      - EX3/UnitTests/Date/datetest
     # How long we store the artifacts in GitLab
     expire_in: 2d
 
@@ -106,7 +106,7 @@ DateTest:
     # Go to the correct directory
     - cd EX3/UnitTests/Date
     # Run the test binary
-    - ./tst_date
+    - ./datetest
   # On what jobs this dependes on, which artifacts we download for this job
   dependencies:
     - Date
