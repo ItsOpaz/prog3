@@ -2,19 +2,23 @@ QT       += testlib
 
 QT       -= gui
 
-TARGET = tst_date
+TARGET = datetest
 CONFIG   += console
 CONFIG   -= app_bundle
 
 TEMPLATE = app
 
 
-SOURCES += tst_date.cpp \
-    ../../WelcomeToTampere/date.cc
+SOURCES += \
+    ../../WelcomeToTampere/date.cc \
+    datetest.cpp
+    ../../WelcomeToTampere/badate.cc
+
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
 
 HEADERS += \
     ../../WelcomeToTampere/date.hh
+    ../../WelcomeToTampere/badate.hh
 
 INCLUDEPATH += \
             ../../WelcomeToTampere/
