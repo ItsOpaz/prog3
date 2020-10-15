@@ -2,7 +2,7 @@ QT       += testlib
 
 QT       -= gui
 
-TARGET = morottajatest
+TARGET = tst_date
 CONFIG   += console
 CONFIG   -= app_bundle
 
