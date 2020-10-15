@@ -2,7 +2,7 @@ QT       += testlib
 
 QT       -= gui
 
-TARGET = datetest.cpp
+TARGET = datetest
 CONFIG   += console
 CONFIG   -= app_bundle
 
