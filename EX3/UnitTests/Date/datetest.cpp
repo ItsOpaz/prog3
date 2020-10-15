@@ -57,4 +57,4 @@ void DateTest::weekday_data()
 
 QTEST_APPLESS_MAIN(DateTest)
 
-#include "tst_date.moc"
+#include "datetest.moc"
