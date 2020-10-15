@@ -11,14 +11,14 @@ TEMPLATE = app
 
 SOURCES += \
     ../../WelcomeToTampere/date.cc \
-    datetest.cpp
-    ../../WelcomeToTampere/badate.cc
+    datetest.cpp \
+    ../../WelcomeToTampere/baddate.cc \
 
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
 
 HEADERS += \
-    ../../WelcomeToTampere/date.hh
-    ../../WelcomeToTampere/badate.hh
+    ../../WelcomeToTampere/date.hh \
+    ../../WelcomeToTampere/baddate.hh \
 
 INCLUDEPATH += \
             ../../WelcomeToTampere/
