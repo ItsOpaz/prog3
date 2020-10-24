@@ -1,8 +1,10 @@
 #include "mainwindow.hh"
 #include "ui_mainwindow.h"
 #include "fastball.hh"
+#include "oddball.hh"
 #include "constants.hh"
 #include "movingobjectgraphics.hh"
+#include "dialog.hh"
 
 #include <QDebug>
 #include <QLayout>
@@ -56,6 +58,15 @@ void MainWindow::spawnObjects(int count, ObjectType type)
             view_->scene()->addItem(pGraph);
 
         }
+        if( type == ObjectType::ODDBALL )
+        {
+            auto pObj = std::make_shared<OddBall>();
+            engine_->registerObject(pObj);
+            auto pGraph = new MovingObjectGraphics(pObj);
+            graphics_.push_back(pGraph);
+            view_->scene()->addItem(pGraph);
+
+        }
     }
 }
 
@@ -73,6 +84,14 @@ void MainWindow::startOrStop()
     {
         timer_->start();
         ui->startButton->setText(MainWindow::S_STOP);
+        auto dialog = new Dialog();
+        if (dialog->exec() == QDialog::Accepted){
+            if(dialog->oddball() == true){
+                spawnObjects(dialog->value(), ODDBALL);
+            }else{
+                spawnObjects(dialog->value(), FASTBALL);
+            }
+        }
     }
     else
     {
